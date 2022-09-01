@@ -1,11 +1,10 @@
-const myHeading = document.querySelector('h3');
-myHeading.textContent = 'Hello world!';
+const myImage = document.querySelector('img');
 
-function multiply(num1,num2) {
-    let result = num1 * num2;
-    return result;
+myImage.onclick = () => {
+  const mySrc = myImage.getAttribute('src');
+  if (mySrc === 'images/download.jfif') {
+    myImage.setAttribute('src','images/firefox2.jpg');
+  } else {
+    myImage.setAttribute('src','images/download.jfif');
   }
-  multiply(4, 7);
-  multiply(20, 20);
-  multiply(0.5, 3);
-    
+}
